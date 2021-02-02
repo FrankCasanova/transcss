@@ -34,6 +34,8 @@ body{
     position: relative;
     height: 100px;
     width: 100%;
+    /* transform: rotar | sesgar| posición| tamaño; */
+    transform: rotate(45deg) skew(5deg) translate(20px) scale(.6) ;
 }
 .pelota.a {
     background: red;
@@ -49,5 +51,6 @@ body{
 }
 .canasta:hover .pelota.b{
     right: calc(50% - 100px);
+    
    
 }
