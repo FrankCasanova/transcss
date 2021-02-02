@@ -44,11 +44,12 @@ body{
     animation-duration: 3s;
     /* animation-delay: .5s; */
     animation-iteration-count: infinite;
-     animation-timing-function: ease;
+     /* animation-timing-function: ease; */
     animation-direction: alternate; 
     /* animation-fill-mode: forwards; */
     animation-play-state: running;
     position: relative;
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
 
     
 }   
