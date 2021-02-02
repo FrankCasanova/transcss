@@ -1,6 +1,6 @@
 body{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 100vh;
     color: white;
@@ -41,9 +41,9 @@ body{
     /* transition: 1s; */
     /* transform-origin: left top; */
     animation-name: cuadrado, rebote;
-    animation-duration: 2s, 0.3s;
+    animation-duration: 3s,.3s;
     /* animation-delay: .5s; */
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite,20;
      /* animation-timing-function: ease; */
     animation-direction: alternate; 
     /* animation-fill-mode: forwards; */
@@ -73,5 +73,13 @@ body{
     to{
         transform: translateY(100px) scale(1,.8);
         
+    }
+}
+@keyframes escalera{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(500px);
     }
 }

@@ -8,7 +8,18 @@
 </head>
 <body>
     <section class="container">
-        <div class="cuadrado">HOLA PUTAS</div>
+        <div class="cuadrado" id="cuadrado">HOLA PUTAS</div>
     </section>
+    <script>
+        const $cuadrado = document.getElementById('cuadrado')
+        // $cuadrado.addEventListener('nombre del event', 'qué hago cuando el evento ocurra')
+        $cuadrado.addEventListener('animationend', (event) => {
+            console.log(event.animationName);
+            if (event.animationName === 'rebote'){
+                $cuadrado.style.animationName = 'cuadrado, escalera';
+                $cuadrado.style.webkitAnimationDuration = '3s, 3s'
+            }
+        })
+    </script>
 </body>
 </html>
