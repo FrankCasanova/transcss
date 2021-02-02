@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    perspective: 200px;
+    perspective-origin: center;
+}
+.container{
+    border: 1px solid red;
+}
+.container:hover .cuadrado{
+    /* transform: rotatez(45deg) rotatey(90deg) rotatez(90deg) ; */
+    /* transform: rotate3d(90,90,45,720deg); */
+    /* transform: translate(40px, 40px,); */
+    transform: translate3d(10px, 20px, 30px)
+
+}
+.cuadrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: #7dc900;
+    margin: 20px;
+    /* transform: rotate(45deg); */
+    transition: 1s;
+}
