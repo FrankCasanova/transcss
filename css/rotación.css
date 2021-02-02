@@ -10,6 +10,7 @@ body{
 }
 .container{
     border: 1px solid red;
+    width: 100%;
 }
 .container:hover .cuadrado{
     /* transform-origin: x50% y50%; */
@@ -22,19 +23,44 @@ body{
     /* transform: scale(1.2, 0.5); */
     /* transform: skew(x,y); */
     /* transform: skew(45deg, 45deg); */
-    transform: rotatez(720deg);
+    /* transform: rotatez(720deg); */
+    animation-play-state: paused;
 
 
 }
 .cuadrado{
     display: flex;
     justify-content: center;
+    border-radius: 50%;
     align-items: center;
     width: 200px;
     height: 200px;
     background: #7dc900;
     margin: 20px;
     /* transform: rotate(45deg); */
-    transition: 1s;
-    transform-origin: left top;
+    /* transition: 1s; */
+    /* transform-origin: left top; */
+    animation-name: cuadrado;
+    animation-duration: 3s;
+    /* animation-delay: .5s; */
+    animation-iteration-count: infinite;
+     animation-timing-function: ease;
+    animation-direction: alternate; 
+    /* animation-fill-mode: forwards; */
+    animation-play-state: running;
+    position: relative;
+
+    
+}   
+@keyframes cuadrado{
+    
+    0%{
+        /* opacity: 1; */
+        left: 0;
+    }
+    100%{
+        /* opacity: 0; */
+        left: calc(100% - 230px);
+    }
+    
 }
