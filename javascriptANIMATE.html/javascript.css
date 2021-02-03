@@ -42,6 +42,5 @@ body{
 }
 .btn:active{
     transform: scale(.9);
-    transform-origin: bottom right;
-    animation-timing-function: ;
+    
 }
