@@ -1,49 +1,72 @@
 body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    /* padding: 0;
+    box-sizing: border-box; */
 }
 .container{
-    position: absolute;
     height: 500px;
     background-color: #0f9bf6;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
 }
 .content{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     text-align: center;
     font-size: 2em;
     color: rgba(255, 255, 255, .8);
 }
-.circulo{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .5);
+.waves{
     position: absolute;
-    animation: wave 5s infinite alternate;
+    /* left: 0;
+    right: 0;
+    height: 200px;
+    bottom: 0; */
+    bottom: -135px;
+    height: 527px;
+    width: 100%;
+    overflow: hidden;
+}
+.wave{
+    position: absolute;
+    left: -180px;
+    bottom: 0 ;
+    width: 2402px;
+    height: 427px;
+    background: url(/olas/olas.webp) center bottom no-repeat;
+    animation: 5s wave ease-in-out infinite alternate;
+    /* border-radius: 50%; */
+    /* background-color: rgba(0, 0, 0, .3); */
 }
 
-.circulo.a{
-    animation-delay: 1s;
+.wave.a{
+    background-position:0 -854px  ;
+    
 }
-.circulo.b{
-    animation-delay: 2s;
+.wave.b{
+    background-position:0 -427px;
+
+    animation-delay: .6s;
 
 }
-.circulo.c{
-    animation-delay: 3s;
+.wave.c{
+    background-position:0 0;
+
+    animation-delay: 1.2s;
 }
 
-@keyframes waves{
+@keyframes wave{
     from{
-        transform: translateX(0) translateY(0);
+        transform: translate(0px,0px);
+
+    }
+    50%{
+        transform: translate(-80,30px);
 
     }
     to{
-        transform: translateX(200px) translateY(100px);
+        transform: translate(160px,-60px);
     }
 }
